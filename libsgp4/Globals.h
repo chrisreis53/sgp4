@@ -1,5 +1,6 @@
 /*
  * Copyright 2013 Daniel Warner <contact@danrw.com>
+ * Edited 2019 by Christopher Reis <chrisreis53@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,14 +21,18 @@
 
 #include <cmath>
 
+/*
+ * Changed constants from WGS-72 to WGS-84
+ *
+ */
 const double kAE = 1.0;
 const double kQ0 = 120.0;
 const double kS0 = 78.0;
-const double kMU = 398600.8;
-const double kXKMPER = 6378.135;
-const double kXJ2 = 1.082616e-3;
-const double kXJ3 = -2.53881e-6;
-const double kXJ4 = -1.65597e-6;
+const double kMU = 398600.4418;
+const double kXKMPER = 6378.137;
+const double kXJ2 = 1.08262998905e-3;
+const double kXJ3 = -2.53215306e-6;
+const double kXJ4 = -1.61098761e-6;
 
 /*
  * alternative XKE
@@ -73,4 +78,3 @@ const double kHOURS_PER_DAY = 24.0;
 const double kA3OVK2 = -kXJ3 / kCK2 * kAE * kAE * kAE;
 
 #endif
-
